@@ -9,13 +9,14 @@ module API
 
     def create
       Rails.logger.debug("****************************************** #{params["title"]}")
-  
+      a = 10
       render json: { params: params }
     end
 
     private
       def page_params
         params.require(:page).permit(:name)
+
       end
 
   end
